@@ -1,0 +1,253 @@
+{
+  "pj": {
+    "cod": "1",
+    "name": "CYPRESS PJ",
+    "cnpj": "23751378000122",
+    "namealt": "MARCELO PJ 1",
+    "insestadual": "537553968820"
+  },
+  "login": {
+    "user": "1",
+    "senha": "2291744"
+  },
+  "pf": {
+    "name": "CYPRESS PF",
+    "cpf": "37032399053",
+    "rg": "478522356",
+    "namealt": "MARCELO PF 1"
+  },
+  "valores": {
+    "cod": "555",
+    "valor1": "556",
+    "valor2": "444",
+    "valor3": "333",
+    "valoralt": "150"
+  },
+  "algoritimos": {
+    "cod": "100",
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1"
+  },
+  "bancos": {
+    "cod": "9",
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1"
+  },
+  "cedulas": {
+    "cod": "1",
+    "codalt": "2",
+    "valor": "10,00",
+    "valoralt": "20,00",
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1"
+  },
+  "chave": {
+    "chave": "110989",
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1"
+  },
+  "combo": {
+    "cod": "1.234",
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1"
+  },
+  "cupom": {
+    "cod": "851",
+    "qtdcupom": "5",
+    "qtdcupomalt": "10",
+    "qtdpontos": "200"
+  },
+  "doacao": {
+    "tpdoacao": "Troco Simples",
+    "vlminimo": "5,00",
+    "vlmaximo": "10,00",
+    "vlmaximoalt": "50,00"
+  },
+  "garantiaestendida": {
+    "descricao": "CYPRESS",
+    "descricaoalt": "MARCELO 1",
+    "cod": "10",
+    "vlgarantia": "2"
+  },
+  "gift": {
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1",
+    "cod": "120",
+    "codfor": "5"
+  },
+  "grpopcoes": {
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1",
+    "cod": "1",
+    "finaliza": "1"
+  },
+  "intermediador": {
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1",
+    "cnpj": "23751378000122",
+    "cod": "1"
+  },
+  "InterpretaçãodeTEF": {
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1",
+    "cod": "1"
+  },
+  "Interpretaçãodetexto": {
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1",
+    "cod": "4",
+    "alinhamento": "Centralizado Normal"
+  },
+  "Leiautedecoletor": {
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1",
+    "cod": "4",
+    "alinhamento": "Centralizado Normal"
+  },
+  "Movivos": {
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1",
+    "cod": "947"
+  },
+  "Teclas": {
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1",
+    "cod": "1"
+  },
+  "Texto": {
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1",
+    "cod": "555",
+    "codlinha": "123"
+  },
+  "CFOP": {
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1",
+    "cod": "37",
+    "cfop": "1000"
+  },
+  "Observacaofiscal": {
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1",
+    "cod": "500",
+    "tipoobs": "Produto",
+    "tipoobsalt": "Nota"
+  },
+  "Integradores": {
+    "name": "CYPRESS",
+    "namealt": "MARCELO 1",
+    "cod": "102"
+  },
+  "Tributacaopdv": {
+    "name": "CYPRESS 50",
+    "namealt": "MARCELO 70",
+    "cod": "1",
+    "aliquota": "50,000",
+    "aliquotaalt": "70,000"
+  },
+  "ICMS": {
+    "name": "CYPRESS ICMS",
+    "namealt": "MARCELO ICMS PR",
+    "cst": "41 - Não Tributada",
+    "ncm": "0201.20.90",
+    "origem": "SP - São Paulo"
+  },
+  "PIS": {
+    "name": "CYPRESS PIS",
+    "namealt": "MARCELO PIS PR",
+    "cst": "07 - Isenta da Contribuição",
+    "ncm": "0201.20.90",
+    "origem": "SP - São Paulo"
+  },
+  "COFINS": {
+    "name": "CYPRESS COFINS",
+    "namealt": "MARCELO COFINS PR",
+    "cst": "07 - Isenta da Contribuição",
+    "ncm": "0201.20.90",
+    "origem": "SP - São Paulo"
+  },
+  "simples": {
+    "name": "CYPRESS SIMPLES",
+    "namealt": "MARCELO SIMPLES PR",
+    "cst": "102 - Trib. Simples Nacional sem permissão de crédito",
+    "ncm": "0201.20.90",
+    "origem": "SP - São Paulo"
+  },
+  "IPI": {
+    "name": "CYPRESS IPI",
+    "namealt": "MARCELO IPI PR",
+    "cst": "02 - Entrada Isenta",
+    "ncm": "0201.20.90",
+    "origem": "SP - São Paulo"
+  },
+  "cstentrada": {
+    "tpimposto": "PIS",
+    "cstsaida": "01 - Tributável com Alíquota Básica",
+    "cstentrada": "01 - Tributável com Alíquota Básica",
+    "cstentradaalt": "05 - Tributável por Substituição Tributária"
+  },
+  "servicos": {
+    "cod": "1",
+    "descricao": "CYPRESS",
+    "descricaoalt": "MARCELO",
+    "valor": "10,00"
+  },
+  "tabelaprecos": {
+    "cod": "1",
+    "codserv": "003 - TESTE",
+    "descricao": "CYPRESS",
+    "descricaoalt": "MARCELO",
+    "valor": "10,00"
+  },
+  "gruponotificacao": {
+    "cod": "1",
+    "descricao": "CYPRESS",
+    "descricaoalt": "MARCELO"
+  },
+  "Associaçãodenotificações": {
+    "cod": "1",
+    "descricao": "CYPRESS",
+    "descricaoalt": "MARCELO",
+    "categoria": "Agenda"
+  },
+  "notificaçãodedesconto": {
+    "valor": "10,00",
+    "grupo": "10 - GRUPO 10",
+    "grupoalt": "11 - GRUPO 11",
+    "grupo1": "GRUPO 10",
+    "categoria": "Agenda"
+  },
+  "funcaopdv": {
+    "cartao": "10,00",
+    "grupo": "10 - GRUPO 10",
+    "grupoalt": "11 - GRUPO 11",
+    "grupo1": "GRUPO 10",
+    "categoria": "Agenda"
+  },
+  "faixamercadoria": {
+    "faixa": "1",
+    "descricao": "CYPRESS",
+    "descricaoalt": "MARCELO"
+  },
+  "infnutricional": {
+    "cod": "2",
+    "descricao": "CYPRESS",
+    "descricaoalt": "MARCELO",
+    "qtd": "1",
+    "un": "GR"
+  },
+  "receita": {
+    "cod": "2",
+    "descricao": "CYPRESS BOLO",
+    "descricaoalt": "MARCELO TORTA",
+    "detalhereceita": "Fazer bolo de cenoura"
+  },
+  "atributo": {
+    "cod": "1",
+    "descricao": "CYPRESS",
+    "descricaoalt": "MARCELO",
+    "codcaracter": "1",
+    "descaracter": "TESTE",
+    "sigla": "M"
+  }
+}
