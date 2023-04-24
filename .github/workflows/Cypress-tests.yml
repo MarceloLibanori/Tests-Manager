@@ -2,7 +2,70 @@ name: End-to-end tests
 on: [push]
 jobs:
   cypress-run:
-    runs-on: ubuntu-20.04
+    runs-on: 
+      networks:
+      zanthus-network:
+      driver: bridge
+  #********* CONTAINER FUNCIONAL DO MANAGER********* 
+  services:
+     manager_1:
+    #AQUI DEVE DEFINIR QUAL IMAGEM SERA UTILIZADA DESCOMENTANDO OU EDITANDO A LINHA CONFORME NECESSIDADE (POSTGRE, ORACLE OU SQL)
+    #IMAGEM APENAS PARA BANCO ORACLE
+    #image: 192.168.0.226:5000/zeus_manager:ManagerWeb_php_8.1_Nginx_Oracle
+
+    #IMAGEM APENAS PARA BANCO POSTGRESQL
+      image: 192.168.0.226:5000/zeus_manager:ManagerWeb_php_8.1_Nginx_Postgresql
+
+      restart: always #PARAMETRO RESPONSAVEL PELA DEFINIÇÃO > EM CASO DE FALHA O CONTAINER SERA REINICIADO AUTOMATICAMENTE
+     privileged: true #PARAMETRO RESPONSAVEL PELA DEFINIÇÃO > USUARIO COM PRIVILEGIO ROOT    
+entrypoint: ./entrypoint.sh #PARAMETRO RESPONSAVEL PELA DEFINIÇÃO > COMANDO DE EXECUÇÃO NA INICIALIZAÇÃO DO CONTAINER
+command: /usr/sbin/init
+    ports:
+      - "80:80" #PARAMETRO RESPONSAVEL PELA DEFINIÇÃO > PORTA DA ESQUERDA A QUE SERA ACESSIVEL PELO WINDOWS DA DIREITA DESTINO NO CONTAINER
+      # - "8022:22" 
+    networks:
+      - zanthus-network #PARAMETRO RESPONSAVEL PELA DEFINIÇÃO > QUAL REDE O CONTAINER VAI SE COMUNICAR AUTOMATICAMENTE
+    #AQUI DEFINIMOS AS VARIAVEIS DE AMBIENTE
+    environment:
+      #Quando tiver Memcache use dessa forma.
+      - MEMCACHE_IP=memcached_server:11211
+      #Quando não tiver MEMCACHE use dessa forma  
+      #- MEMCACHE_IP=
+      #Quando tiver MIRAGE coloque assim 
+      #- HABILITAR_MIRAGE=true
+      #Quando não tiver MIRAGE coloque assim 
+      #- HABILITAR_MIRAGE=
+      #Ajusta o timezone, pra mostrar a hora corretamente.
+      - TZ=America/Bahia
+      #AQUI DEFINIMOS OS VOLUMES QUE SERAO COMPARTILHADOS ENTRE A MAQUINA E O CONTAINER
+    volumes:
+      - C:\Zanthus\Zeus\ZanthusDocker\path_comum:/Zanthus/Zeus/path_comum:consistent
+      - C:\Zanthus\Zeus\ZanthusDocker\htdocs\:/usr/local/nginx/htdocs:consistent
+      - C:\Zanthus\Zeus\ZanthusDocker\libs_zanthus:/usr/src/libs_zanthus:consistent
+      #AQUI DEFINIMOS A LIMITAÇÃO DE CPU E MEMORIA > PARAMETRO FILHO DO ARQUIVO DE CONFIGURAÇÃO .wsl.conf
+      # deploy:
+      #   resources:
+      #     limits:
+      #       cpus: '0.50'
+      #       memory: 50M
+      #     reservations:
+      #       cpus: '0.25'
+      #       memory: 20M
+
+      #  #********* CONTAINER FUNCIONAL DO MEMCACHED********* 
+  memcached_server:
+    image: memcached:1.6.15-alpine
+    container_name: memcached_postgresql
+    restart: always
+    command:
+      - '-m 16024 -U 0'
+    ports:
+      - "11211:11211"
+    networks:
+      - zanthus-network
+    environment:
+      - TZ=America/Bahia
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
