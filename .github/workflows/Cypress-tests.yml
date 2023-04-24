@@ -1,10 +1,10 @@
-  version: "3.9"
+version: "3.9"
 networks:
-  zanthus-network:
+    zanthus-network:
     driver: bridge
   #********* CONTAINER FUNCIONAL DO MANAGER********* 
-services:
-  manager_1:
+    services:
+    manager_1:
     #AQUI DEVE DEFINIR QUAL IMAGEM SERA UTILIZADA DESCOMENTANDO OU EDITANDO A LINHA CONFORME NECESSIDADE (POSTGRE, ORACLE OU SQL)
     #IMAGEM APENAS PARA BANCO ORACLE
     #image: 192.168.0.226:5000/zeus_manager:ManagerWeb_php_8.1_Nginx_Oracle
@@ -49,15 +49,16 @@ services:
       #       memory: 20M
 
       #  #********* CONTAINER FUNCIONAL DO MEMCACHED********* 
-  memcached_server:
-    image: memcached:1.6.15-alpine
+    memcached_server:
+      image: memcached:1.6.15-alpine
     container_name: memcached_postgresql
-    restart: always
-    command:
-      - '-m 16024 -U 0'
-    ports:
+      restart:
+        always
+      command:
+         - '-m 16024 -U 0'
+      ports:
       - "11211:11211"
-    networks:
+      networks:
       - zanthus-network
-    environment:
+      environment:
       - TZ=America/Bahia
