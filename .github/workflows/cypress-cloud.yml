@@ -11,7 +11,7 @@ jobs:
   cypress-e2e-electron:
     runs-on: ubuntu-latest
     container:
-      image: 192.168.0.226:5000/zeus_manager:ManagerWeb_php_8.1_Nginx_Postgresql
+      image: memcached:1.6.15-alpine
     
     steps:
       - name: Get code
