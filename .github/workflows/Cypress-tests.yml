@@ -10,7 +10,12 @@ jobs:
         image: memcached:1.6.15-alpine
     
      
-    
+    steps:
+      
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
    
 
  
