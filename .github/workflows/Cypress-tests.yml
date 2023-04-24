@@ -1,0 +1,10 @@
+name: Cypress Tests
+
+
+
+jobs:
+  cypress-electron-tests:
+    steps: 
+      -name: Run E2E tests
+      run: npm cypress run
+      
