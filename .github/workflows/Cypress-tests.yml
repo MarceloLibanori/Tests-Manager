@@ -1,25 +1,21 @@
-name: End-to-end tests
-on: [push]
-jobs:
-  cypress-run:
-    runs-on: 
-      networks:
-      zanthus-network:
-      driver: bridge
+version: "3.9"
+networks:
+  zanthus-network:
+    driver: bridge
   #********* CONTAINER FUNCIONAL DO MANAGER********* 
-  services:
-     manager_1:
+services:
+  manager_1:
     #AQUI DEVE DEFINIR QUAL IMAGEM SERA UTILIZADA DESCOMENTANDO OU EDITANDO A LINHA CONFORME NECESSIDADE (POSTGRE, ORACLE OU SQL)
     #IMAGEM APENAS PARA BANCO ORACLE
     #image: 192.168.0.226:5000/zeus_manager:ManagerWeb_php_8.1_Nginx_Oracle
 
     #IMAGEM APENAS PARA BANCO POSTGRESQL
-      image: 192.168.0.226:5000/zeus_manager:ManagerWeb_php_8.1_Nginx_Postgresql
+    image: 192.168.0.226:5000/zeus_manager:ManagerWeb_php_8.1_Nginx_Postgresql
 
-      restart: always #PARAMETRO RESPONSAVEL PELA DEFINIÇÃO > EM CASO DE FALHA O CONTAINER SERA REINICIADO AUTOMATICAMENTE
-     privileged: true #PARAMETRO RESPONSAVEL PELA DEFINIÇÃO > USUARIO COM PRIVILEGIO ROOT    
-entrypoint: ./entrypoint.sh #PARAMETRO RESPONSAVEL PELA DEFINIÇÃO > COMANDO DE EXECUÇÃO NA INICIALIZAÇÃO DO CONTAINER
-command: /usr/sbin/init
+    restart: always #PARAMETRO RESPONSAVEL PELA DEFINIÇÃO > EM CASO DE FALHA O CONTAINER SERA REINICIADO AUTOMATICAMENTE
+    privileged: true #PARAMETRO RESPONSAVEL PELA DEFINIÇÃO > USUARIO COM PRIVILEGIO ROOT    
+    entrypoint: ./entrypoint.sh #PARAMETRO RESPONSAVEL PELA DEFINIÇÃO > COMANDO DE EXECUÇÃO NA INICIALIZAÇÃO DO CONTAINER
+    command: /usr/sbin/init
     ports:
       - "80:80" #PARAMETRO RESPONSAVEL PELA DEFINIÇÃO > PORTA DA ESQUERDA A QUE SERA ACESSIVEL PELO WINDOWS DA DIREITA DESTINO NO CONTAINER
       # - "8022:22" 
@@ -65,11 +61,3 @@ command: /usr/sbin/init
       - zanthus-network
     environment:
       - TZ=America/Bahia
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v4 
