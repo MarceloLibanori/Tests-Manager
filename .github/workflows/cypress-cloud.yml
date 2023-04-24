@@ -11,8 +11,8 @@ jobs:
   cypress-e2e-electron:
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node18.12.0-chrome103-ff107
-      options: --user 1001
+      image: 192.168.0.226:5000/zeus_manager:ManagerWeb_php_8.1_Nginx_Postgresql
+    
     steps:
       - name: Get code
         uses: actions/checkout@v3.3.0
