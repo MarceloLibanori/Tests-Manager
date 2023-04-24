@@ -13,10 +13,6 @@ jobs:
     steps:
               
       - name: Cypress run
-        uses: cypress-io/github-action@v4
-        with:
-          record: true
-          parallel: true
-          group: 'Actions example'
+       
 
  
