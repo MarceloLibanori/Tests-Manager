@@ -1,0 +1,28 @@
+name: Cypress Cloud
+
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+      description: Run by cypress command line
+      default: cypress/e2e/**
+jobs: 
+  cypress-e2e-electron:
+        runs-on: ubunto-lastest
+        steps: 
+          - name: Get code
+            uses: actions/checkout@v3.3.0
+          
+          - name: Cypress run
+            uses: cypress-io/github-action@v5.6.1
+            with:
+              instakk-command: npx install
+              browser: electron
+              record: true
+              group: UI Electron
+              spec: ${{ github.event.inputs.spec }}
+        env:
+            CYPRESS_RECORD_KEY: 56be7498-7b0a-4559-b1e8-300d3fe9788c
+            GITHUB_TOKEM: ${{ secrets.GITHUB_TOKEN }}
+           
+      
