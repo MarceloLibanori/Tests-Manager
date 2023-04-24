@@ -1,14 +1,28 @@
-name: End-to-end tests
+name: Parallel Cypress Tests
+
 on: [push]
+
 jobs:
-  e2e-tests:
-    runs-on: ubuntu-latest
+  test:
+    name: Cypress run
+    runs-on: ubuntu-20.04
     container:
         image: memcached:1.6.15-alpine
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
+
+      # because of "record" and "parallel" parameters
+      # these containers will load balance all found tests among themselves
       - name: Cypress run
         uses: cypress-io/github-action@v4
+        with:
+          record: true
+          parallel: true
+          group: 'Actions example'
+        env:
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # Recommended: pass the GitHub token lets this action correctly
+          # determine the unique run id necessary to re-run the checks
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
