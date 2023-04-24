@@ -1,17 +1,21 @@
-on: push
+name: Cypress Tests
 
+on:
+  workflow_dispatch:
+  
 jobs:
-  cypress-run:
+  e2e-tests:
     runs-on: ubuntu-latest
-      memcached_server:
-       image: memcached:1.6.15-alpine
-    container_name: memcached_postgresql
-    restart: always
-    command:
-      - '-m 16024 -U 0'
-    ports:
-      - "11211:11211"
-    networks:
-      - zanthus-network
-    environment:
-      - TZ=America/Bahia
+    container:
+        image: memcached:1.6.15-alpine
+    
+     
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3.5.2
+        
+      - name: Install Dependencies
+        run: yarn install
+        
+      - name: Run E2e Tests
+        run: npx cypress run
