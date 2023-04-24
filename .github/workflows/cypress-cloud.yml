@@ -3,26 +3,32 @@ name: Parallel Cypress Tests
 on: [push]
 
 jobs:
-  test:
-    name: Cypress run
-    runs-on: ubuntu-20.04
+  install:
+    runs-on: docker
     container:
-        image: memcached:1.6.15-alpine
+      image: memcached:1.6.15-alpine
     steps:
+      # Checkout the branch.
       - name: Checkout
         uses: actions/checkout@v2
 
-      # because of "record" and "parallel" parameters
-      # these containers will load balance all found tests among themselves
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
+      - name: Reclaim cache directory
+        run: chown -R 1001:1001 /github/home/.cache && echo "pwn dat cache"
+
+      # install Cypress, run lint and build
+      - name: Cypress install
+        uses: cypress-io/github-action@v2  # <----- This is where mine fails, when cypress is installing
         with:
-          record: true
-          parallel: true
-          group: 'Actions example'
-        env:
-          # pass the Dashboard record key as an environment variable
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          # Recommended: pass the GitHub token lets this action correctly
-          # determine the unique run id necessary to re-run the checks
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          runTests: false
+      - run: yarn cypress info
+      - run: node -p 'os.cpus()'
+      - run: yarn lint
+      - run: yarn build
+
+      # Upload build artifacts
+      - name: Save build folder
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          if-no-files-found: error
+          path: build
