@@ -15,7 +15,7 @@ describe('Cadastro Tabela preços', () => {
     })
 
     context('Cadastro', () => {
-        it.only('Cadastrar Tabela preços', () => {
+        it('Cadastrar Tabela preços', () => {
 
             const task = testData.tabelaprecos
 
@@ -30,11 +30,10 @@ describe('Cadastro Tabela preços', () => {
             cy.get('#VAL_SERVICO').type(task.valor)
             cy.get('#CLASSE_1_BOTAO').click()
             cy.msgincluir()
-            cy.get('#FLT_COD_SERVICO').clear()
-                .type(task.cod)
+            cy.get('#FLT_DESCRICAO').clear()
+                .type(task.descricao)
             cy.get('#EXEC_FILTRO').click()
             cy.contains('#SEL_servico_tabela_TBODY', task.descricao)
-            cy.contains('#SEL_servico_tabela_TBODY', task.cod)
             cy.contains('#SEL_servico_tabela_TBODY', task.codserv)
                 .should('be.visible')
 
@@ -47,11 +46,36 @@ describe('Cadastro Tabela preços', () => {
             const task = testData.tabelaprecos
 
             cy.visit('http://127.0.0.1/manager/cad_preco_servico.php5?id_menu=22202')
-            cy.get('#FLT_COD_SERVICO').clear()
-                .type(task.cod)
+            cy.get('#FLT_DESCRICAO').clear()
+                .type(task.descricao)
             cy.get('#EXEC_FILTRO').click()
+            cy.get('#servico_venda_alterar').click()
+            cy.get('#DESCRICAO').clear()
+                .type(task.descricaoalt)
+            cy.msgalterar()
+            cy.get('#FLT_DESCRICAO').clear()
+                .type(task.descricaoalt)
+            cy.get('#EXEC_FILTRO').click()
+            cy.contains('#SEL_servico_tabela_TBODY', task.descricaoalt)
+            cy.contains('#SEL_servico_tabela_TBODY', task.codserv)
+                .should('be.visible')
 
 
+        })
+    })
+    context('Excluir', () => {
+        it('Excluir Tabela preços', () => {
+
+            const task = testData.tabelaprecos
+
+            cy.visit('http://127.0.0.1/manager/cad_preco_servico.php5?id_menu=22202')
+            cy.get('#FLT_DESCRICAO').clear()
+                .type(task.descricaoalt)
+            cy.get('#EXEC_FILTRO').click()
+            cy.get('#servico_venda_excluir').click()
+            cy.msgexcluir()
+            cy.get('#EXEC_FILTRO').click()
+            cy.get('.dataTables_empty').should("exist")
         })
     })
 })

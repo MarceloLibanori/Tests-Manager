@@ -21,6 +21,7 @@ describe('Cadastro Regras de imposto ISS', () => {
             cy.visit('http://127.0.0.1/manager/adm_regras_impostos.php5?id_menu=20805')
             cy.get('#btn_regra_iss').click()
             cy.get('#btn_Incluir').click()
+            cy.wait(500)
             cy.get('#MUNICIPIO_ORIGEM').type(task.uforigem)
             cy.get('#CST').select('I - Isenta')
             cy.get('#DESCRICAO').type(task.name)
@@ -40,6 +41,7 @@ describe('Cadastro Regras de imposto ISS', () => {
 
             cy.visit('http://127.0.0.1/manager/adm_regras_impostos.php5?id_menu=20805')
             cy.get('#btn_regra_iss').click()
+            cy.wait(500)
             cy.get('#FLT_DESCRICAO').type(task.name)
             cy.get('#EXEC_FILTRO').click()
             cy.get('#regras_icms_alterar').click()
@@ -68,6 +70,7 @@ describe('Cadastro Regras de imposto ISS', () => {
             cy.get('#btn_regra_iss').click()
             cy.intercept('http://127.0.0.1/manager/adm_regras_impostos.php5?id_menu=20805')
             cy.intercept('#DESCRICAO')
+            cy.wait(500)
             cy.get('#FLT_DESCRICAO').type(task.namealt)
             cy.get('#EXEC_FILTRO').click()
             cy.get('#regras_icms_excluir').click()

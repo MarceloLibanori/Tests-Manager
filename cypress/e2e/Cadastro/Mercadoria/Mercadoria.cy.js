@@ -70,7 +70,7 @@ describe('Cadastro Mercadoria', () => {
             cy.msgalterar()
             cy.get('#FLT_COD_MERCADORIA').clear()
             .type(task.cod)
-        cy.get('#FLT_DESCRICAO').clear()
+            cy.get('#FLT_DESCRICAO').clear()
             .type(task.namealt)
             cy.get('#EXEC_FILTRO').click()
             cy.contains('#SEL_mercadoria_TBODY tr', task.cod)

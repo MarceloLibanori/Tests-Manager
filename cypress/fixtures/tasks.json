@@ -249,5 +249,21 @@
     "codcaracter": "1",
     "descaracter": "TESTE",
     "sigla": "M"
+  },
+  "sugestaodevenda": {
+    "prod": "00000000000000012",
+    "prod2": "00000000000033577",
+    "controle": "MARCELO"
+  },
+  "familia": {
+    "cod": "12",
+    "descricao": "CYPRESS",
+    "descricaoalt": "MARCELO"
+  },
+  "Grupodeinformações": {
+    "cod": "12",
+    "descricao": "CYPRESS",
+    "descricaoalt": "MARCELO"
   }
 }
+

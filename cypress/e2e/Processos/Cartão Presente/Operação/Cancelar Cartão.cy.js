@@ -1,6 +1,6 @@
 ///<reference types="cypress"/>
 
-describe('Cadastro Serviços', () => {
+describe('Cancelar Cartão', () => {
 
   beforeEach(() => {
       cy.login()
@@ -14,8 +14,8 @@ describe('Cadastro Serviços', () => {
       })
   })
 
-  context('Cadastro', () => {
-      it('Cadastrar Serviços', () => {
+  context('cancelar', () => {
+      it('Cancelar Cartão', () => {
 
           const task = testData.servicos
 

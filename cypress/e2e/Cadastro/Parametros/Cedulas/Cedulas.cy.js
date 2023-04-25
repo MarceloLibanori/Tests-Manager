@@ -37,7 +37,7 @@ describe('Cadastro Cedulas', () => {
         })
     })
     context('Alterar', () => {
-        it.only('Alterar Cedulas', () => {
+        it('Alterar Cedulas', () => {
 
             const task = testData.cedulas
 
@@ -46,20 +46,16 @@ describe('Cadastro Cedulas', () => {
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
             cy.get('#cedula_alterar').click()
-            cy.get('#COD_TAB_CEDULA').clear()
-                .type(task.codalt)
-            cy.get('#VALOR').clear()
-                .type(task.valoralt)
             cy.get('#DESCRICAO').clear()
                 .type(task.namealt)
             cy.msgalterar()
             cy.get('#FLT_COD_TAB_CEDULA').clear()
-                .type(task.codalt)
+                .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
 
-            cy.contains('#SEL_cedula_TBODY tr', task.name)
-                .contains('#SEL_cedula_TBODY tr', task.codalt)
-                .contains('#SEL_cedula_TBODY tr', task.valoralt)
+            cy.contains('#SEL_cedula_TBODY tr', task.namealt)
+                .contains('#SEL_cedula_TBODY tr', task.cod)
+                .contains('#SEL_cedula_TBODY tr', task.valor)
                 .should('be.visible')
         })
     })
@@ -70,7 +66,7 @@ describe('Cadastro Cedulas', () => {
 
             cy.visit('http://127.0.0.1/manager/cad_cedula.php5')
             cy.get('#FLT_COD_TAB_CEDULA').clear()
-                .type(task.codalt)
+                .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
             cy.get('#cedula_excluir').click()
             cy.msgexcluir()

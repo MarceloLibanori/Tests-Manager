@@ -27,8 +27,6 @@ describe('Cadastro Observacao fiscal', () => {
             cy.msgincluir()
             cy.get('#FLT_COD_OBSERVACAO_FISCAL').clear()
                 .type(task.cod)
-            cy.get('#FLT_DES_OBSERVACAO_FISCAL').clear()
-                .type(task.name)
             cy.get('#EXEC_FILTRO').click()
 
             cy.contains('#SEL_observacao_fiscal_TBODY tr', task.name)
@@ -55,8 +53,9 @@ describe('Cadastro Observacao fiscal', () => {
                 .type(task.namealt)
             cy.get('#TIPO_OBSERVACAO_FISCAL').select(task.tipoobsalt)
             cy.msgalterar()
+            cy.get('#FLT_COD_OBSERVACAO_FISCAL').clear()
+            .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
-
             cy.contains('#SEL_observacao_fiscal_TBODY tr', task.namealt)
                 .contains('#SEL_observacao_fiscal_TBODY tr', task.cod)
                 .contains('#SEL_observacao_fiscal_TBODY tr', task.tipoobsalt)

@@ -1,6 +1,6 @@
 ///<reference types="cypress"/>
 
-describe('Cadastro Teclas', () => {
+describe('Cadastro Texto', () => {
     beforeEach(() => {
         cy.login()
     })
@@ -55,8 +55,8 @@ describe('Cadastro Teclas', () => {
                 .should('be.visible')
         })
     })
-    context('Alterar', () => {
-        it('Alterar Texto', () => {
+    context('Excluir', () => {
+        it('Excluir Texto', () => {
 
             const task = testData.Texto
 
