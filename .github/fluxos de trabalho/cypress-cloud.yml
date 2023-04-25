@@ -1,0 +1,44 @@
+Testes: 
+    execuções:  ubuntu -últimas
+
+    etapas: 
+      -  usa:  ações/checkout@v2 
+      -  nome:  configurar  JDK 11 usa: ações/setup-java@v2 com: java-version: '11' distribuição: 'adotar' - name: Concede permissão de execução para gradlew run: chmod +x gradlew - name: Unit Tests run: ./gradlew test -x integrationTest - name: Integration Tests run:  
+         
+        
+           
+           
+
+            
+           
+
+         
+            
+
+         
+         ./gradlew  integrationTest 
+
+      -  nome:  obter  histórico do Allure  usa: ações/checkout@v2 se: sempre () continuar com erro: verdadeiro com: ref: gh-pages caminho: gh-pages - nome: Allure Reportar ação do mercado usa : simple-elf/allure-report-action@master if: always() id: allure-report with: allure_results: allure-results gh_pages: gh-pages allure_report: allure-report allure_history:
+         
+         
+         
+        
+           
+           
+
+            
+         
+         
+         
+        
+           
+           
+           
+           allure-history 
+
+      -  name:  Implantar  relatório  nas  páginas do Github  se: always() usa: peaceiris/actions-gh-pages@v2 env: PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }} PUBLISH_BRANCH: gh-pages PUBLISH_DIR: allure-history
+         
+         
+        
+             
+           
