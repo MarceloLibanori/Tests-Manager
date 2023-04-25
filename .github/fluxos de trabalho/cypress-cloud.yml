@@ -1,5 +1,5 @@
 Testes: 
-    execuções:  ubuntu -últimas 
+    execuções:  ubuntu -últimas
 
     etapas: 
       -  usa:  ações/checkout@v2 
