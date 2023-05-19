@@ -21,7 +21,7 @@ describe('Cancelar Cartão', () => {
 
           cy.visit('http://127.0.0.1/manager/cad_giftcard_cancelar.php5?id_menu=3010405')
           cy.wait(200)
-          cy.get('#CARTAO').type('10')
+          cy.get('#CARTAO').type('111')
           cy.wait(200)
           cy.get('#COMENTARIO').type('Marcelo Cypress')
           cy.wait(200)

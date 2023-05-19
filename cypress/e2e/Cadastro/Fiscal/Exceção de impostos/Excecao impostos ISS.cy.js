@@ -25,6 +25,7 @@ describe('Cadastro Excecao impostos ISS', () => {
       cy.wait(500)
       cy.get('#MUNICIPIO_ORIGEM').type(task.uforigem)
       cy.get('#MUNICIPIO_DESTINO').type(task.ufdestino)
+      cy.wait(200)
       cy.get('#DESCRICAO').type(task.name)
       cy.get('#CST').select('I - Isenta')
       cy.msgincluir()

@@ -83,6 +83,12 @@ Cypress.Commands.add('msgalterar', (msgalterar) => {
     cy.get('.confirm').click()
 
 })
+Cypress.Commands.add('msgvigencia', (msgalterar) => {
+    cy.get('#btn-incluir').click()
+    cy.get('#alert_message_internal').should('have.text', 'Vigï¿½ncia cadastrada com sucesso!Para sair desta tela clique em "Voltar ao menu".')
+    cy.get('.confirm').click()
+
+})
 
 
 Cypress.Commands.add('msgexcluir', (msgexcluir) => {

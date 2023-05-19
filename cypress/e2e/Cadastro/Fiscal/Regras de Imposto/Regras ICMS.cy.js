@@ -27,6 +27,7 @@ describe('Cadastro Regras ICMS', () => {
             cy.get('#CST').select(task.cst)
             cy.get('#COD_NCM_INI').type(task.ncm)
             cy.get('#COD_NCM_FINAL').type(task.ncm)
+            cy.get('#COD_LOJA').select(task.loja)
             cy.msgincluir()
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.name)

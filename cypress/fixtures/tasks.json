@@ -150,14 +150,16 @@
     "namealt": "MARCELO ICMS PR",
     "cst": "41 - Não Tributada",
     "ncm": "0201.20.90",
-    "origem": "SP - São Paulo"
+    "origem": "SP - São Paulo",
+    "loja": "1 - São Paulo (CF-e SAT)"
   },
   "PIS": {
     "name": "CYPRESS PIS",
     "namealt": "MARCELO PIS PR",
     "cst": "07 - Isenta da Contribuição",
     "ncm": "0201.20.90",
-    "origem": "SP - São Paulo"
+    "origem": "SP - São Paulo",
+    "loja": "1 - São Paulo (CF-e SAT)"
   },
   "COFINS": {
     "name": "CYPRESS COFINS",
@@ -264,6 +266,50 @@
     "cod": "12",
     "descricao": "CYPRESS",
     "descricaoalt": "MARCELO"
+  },
+  "Fornecedores": {
+    "cod": "5",
+    "name": "CYPRESS PJ",
+    "cnpj": "23.751.378/0001-22",
+    "namealt": "MARCELO PJ",
+    "insestadual": "537553968820",
+    "prazo": "10"
+  },
+  "fichatecnica": {
+    "produto": "00000000000000002",
+    "consulta": "00000000000000002 - CORANTE LIQUIDO DZ XADREZ VIOLETA XADREZ CORANT",
+    "loja": "1 - São Paulo (CF-e SAT)"
+  },
+  "Fabricante": {
+    "cod": "5",
+    "name": "CYPRESS PJ",
+    "namealt": "MARCELO PJ"
+  },
+  "Prefixogs": {
+    "descricao": "CYPRESS",
+    "descricaoalt": "MARCELO",
+    "prefixoini": "011",
+    "prefixofim": "012"
+  },
+  "precovigencia": {
+    "produto": "00000000000000002",
+    "data": "27-10-2023",
+    "valor": "10,00",
+    "valoralt": "30,00",
+    "consulta": "00000000000000002 - CORANTE LIQUIDO DZ XADREZ VIOLETA XADREZ CORANT",
+    "loja": "1 - São Paulo (CF-e SAT)"
+    
+  },
+  "formulariocoleta": {
+    "cod": "2",
+    "titulo": "CYPRESS",
+    "tituloalt": "MARCELO",
+    "funcao": "54"    
+  },
+  "altcliente": {
+    "cod": "1",
+    "cpf": "09529366744",
+    "convenio1": "ZANTHUS",
+    "convenio2": "ZANTHUS teste"    
   }
 }
-
