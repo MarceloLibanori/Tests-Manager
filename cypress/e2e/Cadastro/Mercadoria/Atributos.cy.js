@@ -19,7 +19,7 @@ describe('Cadastro Receita(', () => {
 
             const task = testData.atributo
 
-            cy.visit('http://127.0.0.1/manager/cad_atributo.php5?')
+            cy.visit('/cad_atributo.php5')
             cy.incluir()
             cy.get('#B_VALOR_BTN').click()
             cy.get('#DES_ATRIBUTO').type(task.descricao)
@@ -45,7 +45,7 @@ describe('Cadastro Receita(', () => {
 
             const task = testData.atributo
 
-            cy.visit('http://127.0.0.1/manager/cad_atributo.php5?')
+            cy.visit('/cad_atributo.php5')
             cy.get('#FLT_DES_ATRIBUTO').clear()
                 .type(task.descricao)
             cy.get('#EXEC_FILTRO').click()
@@ -70,7 +70,7 @@ describe('Cadastro Receita(', () => {
 
             const task = testData.atributo
 
-            cy.visit('http://127.0.0.1/manager/cad_atributo.php5?')
+            cy.visit('/cad_atributo.php5')
             cy.get('#FLT_DES_ATRIBUTO').clear()
                 .type(task.descricaoalt)
             cy.get('#EXEC_FILTRO').click()

@@ -19,7 +19,7 @@ describe('Cadastro Transportadoras', () => {
             const task = testData.pj
 
 
-            cy.visit('http://127.0.0.1/manager/cad_transportadora.php5')
+            cy.visit('/cad_transportadora.php5')
             cy.get('#btn_Incluir').click()
             cy.get('.input-group > #COD_TRANSPORTADORA').type(task.cod)
             cy.get('#DES_RAZAO_SOCIAL').type(task.name)
@@ -41,7 +41,7 @@ describe('Cadastro Transportadoras', () => {
             const task = testData.pj
 
 
-            cy.visit('http://127.0.0.1/manager/cad_transportadora.php5')
+            cy.visit('/cad_transportadora.php5')
             cy.get('#FLT_COD_TRANSPORTADORA').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -62,7 +62,7 @@ describe('Cadastro Transportadoras', () => {
             const task = testData.pj
 
 
-            cy.visit('http://127.0.0.1/manager/cad_transportadora.php5')
+            cy.visit('/cad_transportadora.php5')
             cy.get('#FLT_COD_TRANSPORTADORA').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

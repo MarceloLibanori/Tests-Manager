@@ -18,7 +18,7 @@ describe('Cadastro Observacao fiscal', () => {
 
             const task = testData.Observacaofiscal
 
-            cy.visit('http://127.0.0.1/manager/cad_observacao_fiscal.php5')
+            cy.visit('/cad_observacao_fiscal.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_OBSERVACAO_FISCAL').type(task.cod)
             cy.get('#DES_OBSERVACAO_FISCAL').type(task.name)
@@ -42,7 +42,7 @@ describe('Cadastro Observacao fiscal', () => {
 
             const task = testData.Observacaofiscal
 
-            cy.visit('http://127.0.0.1/manager/cad_observacao_fiscal.php5')
+            cy.visit('/cad_observacao_fiscal.php5')
             cy.get('#FLT_COD_OBSERVACAO_FISCAL').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -68,7 +68,7 @@ describe('Cadastro Observacao fiscal', () => {
 
             const task = testData.Observacaofiscal
 
-            cy.visit('http://127.0.0.1/manager/cad_observacao_fiscal.php5')
+            cy.visit('/cad_observacao_fiscal.php5')
             cy.get('#FLT_COD_OBSERVACAO_FISCAL').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

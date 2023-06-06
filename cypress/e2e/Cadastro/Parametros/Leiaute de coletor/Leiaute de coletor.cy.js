@@ -18,7 +18,7 @@ describe('Cadastro Leiaute de coletor', () => {
 
             const task = testData.Leiautedecoletor
 
-            cy.visit('http://127.0.0.1/manager/cad_coletor_layout.php5')
+            cy.visit('/cad_coletor_layout.php5')
             cy.get('#btn_Incluir').click()
             cy.get('.input-group > #COD_COLETOR_LAYOUT').type(task.cod)
             cy.get('#LINHA_INICIO_CABECALHO').type('10')
@@ -41,7 +41,7 @@ describe('Cadastro Leiaute de coletor', () => {
 
             const task = testData.Leiautedecoletor
 
-            cy.visit('http://127.0.0.1/manager/cad_coletor_layout.php5')
+            cy.visit('/cad_coletor_layout.php5')
             cy.get('#FLT_COD_COLETOR_LAYOUT').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -61,7 +61,7 @@ describe('Cadastro Leiaute de coletor', () => {
 
             const task = testData.Leiautedecoletor
 
-            cy.visit('http://127.0.0.1/manager/cad_coletor_layout.php5')
+            cy.visit('/cad_coletor_layout.php5')
             cy.get('#FLT_COD_COLETOR_LAYOUT').clear()
             .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

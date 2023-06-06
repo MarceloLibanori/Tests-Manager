@@ -19,7 +19,7 @@ describe('Cadastro Associação de notificações', () => {
 
             const task = testData.Associaçãodenotificações
 
-            cy.visit('http://127.0.0.1/manager/cad_notificacao_associacao.php5?id_menu=22302')
+            cy.visit('/cad_notificacao_associacao.php5')
             cy.incluir()
             cy.get('#COD_NOTIFICACAO_ASSOCIACAO').type(task.cod)
             cy.get('#DESCRICAO').type(task.descricao)
@@ -41,7 +41,7 @@ describe('Cadastro Associação de notificações', () => {
 
             const task = testData.Associaçãodenotificações
 
-            cy.visit('http://127.0.0.1/manager/cad_notificacao_associacao.php5?id_menu=22302')
+            cy.visit('/cad_notificacao_associacao.php5')
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.descricao)
             cy.get('#EXEC_FILTRO').click()
@@ -63,7 +63,7 @@ describe('Cadastro Associação de notificações', () => {
 
             const task = testData.Associaçãodenotificações
 
-            cy.visit('http://127.0.0.1/manager/cad_notificacao_associacao.php5?id_menu=22302')
+            cy.visit('/cad_notificacao_associacao.php5')
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.descricaoalt)
             cy.get('#EXEC_FILTRO').click()

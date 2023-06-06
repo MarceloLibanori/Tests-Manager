@@ -18,7 +18,7 @@ describe('Cadastro Exceção COFINS', () => {
 
             const task = testData.COFINS
 
-            cy.visit('http://127.0.0.1/manager/adm_excecao_impostos.php5?id_menu=20806')
+            cy.visit('/adm_excecao_impostos.php5')
             cy.get('#btn_excecao_cofins').click()
             cy.get('#btn_Incluir').click()
             cy.get('#DESCRICAO').type(task.name)
@@ -40,7 +40,7 @@ describe('Cadastro Exceção COFINS', () => {
 
             const task = testData.COFINS
 
-            cy.visit('http://127.0.0.1/manager/adm_excecao_impostos.php5?id_menu=20806')
+            cy.visit('/adm_excecao_impostos.php5')
             cy.get('#btn_excecao_cofins').click()
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.name)
@@ -61,7 +61,7 @@ describe('Cadastro Exceção COFINS', () => {
 
             const task = testData.COFINS
 
-            cy.visit('http://127.0.0.1/manager/adm_excecao_impostos.php5?id_menu=20806')
+            cy.visit('/adm_excecao_impostos.php5')
             cy.get('#btn_excecao_cofins').click()
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.namealt)

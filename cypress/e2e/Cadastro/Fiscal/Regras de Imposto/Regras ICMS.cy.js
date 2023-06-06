@@ -18,7 +18,7 @@ describe('Cadastro Regras ICMS', () => {
 
             const task = testData.ICMS
 
-            cy.visit('http://127.0.0.1/manager/adm_regras_impostos.php5?id_menu=20805')
+            cy.visit('/adm_regras_impostos.php5')
             cy.get('#btn_regra_icms').click()
             cy.get('#btn_Incluir').click()
             cy.get('#DESCRICAO').type(task.name)
@@ -42,7 +42,7 @@ describe('Cadastro Regras ICMS', () => {
 
             const task = testData.ICMS
 
-            cy.visit('http://127.0.0.1/manager/adm_regras_impostos.php5?id_menu=20805')
+            cy.visit('/adm_regras_impostos.php5')
             cy.get('#btn_regra_icms').click()
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.name)
@@ -63,7 +63,7 @@ describe('Cadastro Regras ICMS', () => {
 
             const task = testData.ICMS
 
-            cy.visit('http://127.0.0.1/manager/adm_regras_impostos.php5?id_menu=20805')
+            cy.visit('/adm_regras_impostos.php5')
             cy.get('#btn_regra_icms').click()
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.namealt)

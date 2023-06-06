@@ -18,7 +18,7 @@ describe('Cadastro Produto Sugerido', () => {
 
             const task = testData.sugestaodevenda
 
-            cy.visit('http://127.0.0.1/manager/cad_produto_sugerido.php5?')
+            cy.visit('/cad_produto_sugerido.php5')
             cy.incluir()
             cy.get('#COD_PRODUTO').type(task.prod)
             cy.get('#COD_PRODUTO_SUGERIDO').type(task.prod2)
@@ -42,7 +42,7 @@ describe('Cadastro Produto Sugerido', () => {
 
             const task = testData.sugestaodevenda
 
-            cy.visit('http://127.0.0.1/manager/cad_produto_sugerido.php5?')
+            cy.visit('/cad_produto_sugerido.php5')
             cy.get('#FLT_COD_PRODUTO').clear()
                 .type(task.prod)
             cy.get('#FLT_COD_PRODUTO_SUGERIDO').clear()

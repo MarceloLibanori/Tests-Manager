@@ -18,7 +18,7 @@ describe('Cadastro Doação de troco', () => {
 
                     const task = testData.doacao
 
-                    cy.visit('http://127.0.0.1/manager/cad_troco_doacao.php5')
+                    cy.visit('/cad_troco_doacao.php5')
                     cy.get('#btn_Incluir').click()
                     cy.get('#TIPO_DOACAO').select(task.tpdoacao)
                     cy.get('#VALOR_MIN_DOACAO').type(task.vlminimo)
@@ -36,7 +36,7 @@ describe('Cadastro Doação de troco', () => {
 
                     const task = testData.doacao
 
-                    cy.visit('http://127.0.0.1/manager/cad_troco_doacao.php5')
+                    cy.visit('/cad_troco_doacao.php5')
                     cy.get('#FLT_TIPO_DOACAO').type(task.tpdoacao)
                     cy.get('#EXEC_FILTRO').click()
                     cy.get('#troco_doacao_alterar').click()
@@ -55,7 +55,7 @@ describe('Cadastro Doação de troco', () => {
 
                     const task = testData.doacao
 
-                    cy.visit('http://127.0.0.1/manager/cad_troco_doacao.php5')
+                    cy.visit('/cad_troco_doacao.php5')
                     cy.get('#FLT_TIPO_DOACAO').type('Troco Simples')
                     cy.get('#EXEC_FILTRO').click()
                     cy.get('#troco_doacao_excluir').click()

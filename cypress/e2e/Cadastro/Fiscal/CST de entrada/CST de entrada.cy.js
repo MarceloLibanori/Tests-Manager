@@ -19,7 +19,7 @@ describe('Cadastro CST de entrada', () => {
 
             const task = testData.cstentrada
 
-            cy.visit('http://127.0.0.1/manager/cad_cst_entrada.php5')
+            cy.visit('/cad_cst_entrada.php5')
             cy.incluir()
             cy.get('#FLG_TIPO_IMPOSTO').select(task.tpimposto)
             cy.get('#CST_SAIDA').select(task.cstsaida)
@@ -38,7 +38,7 @@ describe('Cadastro CST de entrada', () => {
 
             const task = testData.cstentrada
 
-            cy.visit('http://127.0.0.1/manager/cad_cst_entrada.php5')
+            cy.visit('/cad_cst_entrada.php5')
             cy.get('#FLT_FLG_TIPO_IMPOSTO').select(task.tpimposto)
             cy.get('#EXEC_FILTRO').click()
             cy.get('#cst_entrada_alterar').click()
@@ -59,7 +59,7 @@ describe('Cadastro CST de entrada', () => {
 
             const task = testData.cstentrada
 
-            cy.visit('http://127.0.0.1/manager/cad_cst_entrada.php5')
+            cy.visit('/cad_cst_entrada.php5')
             cy.get('#FLT_FLG_TIPO_IMPOSTO').select(task.tpimposto)
             cy.get('#EXEC_FILTRO').click()
             cy.get('#cst_entrada_excluir').click()

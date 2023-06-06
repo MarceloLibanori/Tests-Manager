@@ -19,7 +19,7 @@ describe('Cadastro Cadastro de notificação de desconto', () => {
 
             const task = testData.notificaçãodedesconto
 
-            cy.visit('http://127.0.0.1/manager/cad_notificacao_desconto.php5')
+            cy.visit('/cad_notificacao_desconto.php5')
             cy.incluir()
             cy.get('#FAIXA_INICIAL').type(task.valor)
             cy.msgincluir()
@@ -38,7 +38,7 @@ describe('Cadastro Cadastro de notificação de desconto', () => {
 
             const task = testData.notificaçãodedesconto
 
-            cy.visit('http://127.0.0.1/manager/cad_notificacao_desconto.php5')
+            cy.visit('/cad_notificacao_desconto.php5')
             cy.get('#FLT_COD_GRUPO_NOTIFICACAO').clear()
             .type('10')
             cy.get('#EXEC_FILTRO').click()
@@ -60,7 +60,7 @@ describe('Cadastro Cadastro de notificação de desconto', () => {
 
             const task = testData.notificaçãodedesconto
 
-            cy.visit('http://127.0.0.1/manager/cad_notificacao_desconto.php5')
+            cy.visit('/cad_notificacao_desconto.php5')
             cy.get('#FLT_COD_GRUPO_NOTIFICACAO').clear()
             .type('11')
             cy.get('#EXEC_FILTRO').click()

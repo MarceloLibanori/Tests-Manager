@@ -19,7 +19,7 @@ describe('Cadastro Excecao impostos ISS', () => {
       const task = testData.iss
 
 
-      cy.visit('http://127.0.0.1/manager/adm_excecao_impostos.php5?id_menu=20806')
+      cy.visit('/adm_excecao_impostos.php5')
       cy.get('#btn_regra_iss').click()
       cy.get('#btn_Incluir').click()
       cy.wait(500)
@@ -44,7 +44,7 @@ describe('Cadastro Excecao impostos ISS', () => {
       const task = testData.iss
 
       
-      cy.visit('http://127.0.0.1/manager/adm_excecao_impostos.php5?id_menu=20806')
+      cy.visit('/adm_excecao_impostos.php5')
       cy.get('#btn_regra_iss').click()
       cy.wait(500)
       cy.get('#FLT_DESCRICAO').clear()
@@ -71,7 +71,7 @@ describe('Cadastro Excecao impostos ISS', () => {
       const task = testData.iss
 
      
-      cy.visit('http://127.0.0.1/manager/adm_excecao_impostos.php5?id_menu=20806')
+      cy.visit('/adm_excecao_impostos.php5')
       cy.get('#btn_regra_iss').click()
       cy.wait(500)
       cy.get('#FLT_DESCRICAO').clear()

@@ -18,7 +18,7 @@ describe('Cadastro Tributacao pdv', () => {
 
             const task = testData.Tributacaopdv
 
-            cy.visit('http://127.0.0.1/manager/cad_tributacao_pdv.php5')
+            cy.visit('/cad_tributacao_pdv.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_TRIBUTACAO_PDV').type(task.cod)
             cy.get('#DESCRICAO').type(task.name)
@@ -40,7 +40,7 @@ describe('Cadastro Tributacao pdv', () => {
 
             const task = testData.Tributacaopdv
 
-            cy.visit('http://127.0.0.1/manager/cad_tributacao_pdv.php5')
+            cy.visit('/cad_tributacao_pdv.php5')
             cy.get('#FLT_COD_TRIBUTACAO_PDV').clear()
                 .type(task.cod)
             cy.get('#FLT_DESCRICAO').clear()
@@ -66,7 +66,7 @@ describe('Cadastro Tributacao pdv', () => {
 
             const task = testData.Tributacaopdv
 
-            cy.visit('http://127.0.0.1/manager/cad_tributacao_pdv.php5')
+            cy.visit('/cad_tributacao_pdv.php5')
             cy.get('#FLT_COD_TRIBUTACAO_PDV').clear()
                 .type(task.cod)
             cy.get('#FLT_DESCRICAO').clear()

@@ -18,7 +18,7 @@ describe('Cadastro Grupo de Opções', () => {
 
             const task = testData.grpopcoes
 
-            cy.visit('http://127.0.0.1/manager/cad_grupo_opcao.php5?id_menu=20309')
+            cy.visit('/cad_grupo_opcao.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_GRUPO_OPCAO').type(task.cod)
             cy.get('#DESCRICAO').type(task.name)
@@ -41,7 +41,7 @@ describe('Cadastro Grupo de Opções', () => {
 
             const task = testData.grpopcoes
 
-            cy.visit('http://127.0.0.1/manager/cad_grupo_opcao.php5?id_menu=20309')
+            cy.visit('/cad_grupo_opcao.php5')
             cy.get('#FLT_COD_GRUPO_OPCAO').clear()
                 .type(task.cod)
             cy.get('#FLT_DESCRICAO').clear()
@@ -69,7 +69,7 @@ describe('Cadastro Grupo de Opções', () => {
 
             const task = testData.grpopcoes
 
-            cy.visit('http://127.0.0.1/manager/cad_grupo_opcao.php5?id_menu=20309')
+            cy.visit('/cad_grupo_opcao.php5')
             cy.get('#FLT_COD_GRUPO_OPCAO').clear()
                 .type(task.cod)
             cy.get('#FLT_DESCRICAO').clear()

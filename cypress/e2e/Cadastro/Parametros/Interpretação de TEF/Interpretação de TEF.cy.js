@@ -18,7 +18,7 @@ describe('Cadastro Interpretação de TEF', () => {
 
             const task = testData.InterpretaçãodeTEF
 
-            cy.visit('http://127.0.0.1/manager/cad_interpreta_tef.php5?opt=Inc')
+            cy.visit('/cad_interpreta_tef.php5')
             cy.get('#COD_INSTITUICAO').type(task.cod)
             cy.get('#TEXTO_INTERPRETADO').type(task.name)
             cy.msgincluir()
@@ -36,7 +36,7 @@ describe('Cadastro Interpretação de TEF', () => {
 
             const task = testData.InterpretaçãodeTEF
 
-            cy.visit('http://127.0.0.1/manager/cad_interpreta_tef.php5?id_menu=20307')
+            cy.visit('/cad_interpreta_tef.php5')
             cy.get('#FLT_COD_INSTITUICAO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -56,7 +56,7 @@ describe('Cadastro Interpretação de TEF', () => {
 
             const task = testData.InterpretaçãodeTEF
 
-            cy.visit('http://127.0.0.1/manager/cad_interpreta_tef.php5?id_menu=20307')
+            cy.visit('/cad_interpreta_tef.php5')
             cy.get('#FLT_COD_INSTITUICAO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

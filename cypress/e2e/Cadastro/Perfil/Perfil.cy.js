@@ -11,7 +11,7 @@ describe('Cadastro Perfil', () => {
         it('Cadastrar Perfil', () => {
 
 
-            cy.visit('http://127.0.0.1/manager/cad_perfil.php5')
+            cy.visit('/cad_perfil.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_PERFIL').type('100')
             cy.get('#DESCRICAO').type('CYPRESS')
@@ -29,7 +29,7 @@ describe('Cadastro Perfil', () => {
 
 
 
-            cy.visit('http://127.0.0.1/manager/cad_perfil.php5')
+            cy.visit('/cad_perfil.php5')
             cy.get('#FLT_COD_PERFIL').clear()
                 .type('100')
             cy.get('#EXEC_FILTRO').click()
@@ -47,7 +47,7 @@ describe('Cadastro Perfil', () => {
         it('Excluir Perfil', () => {
 
 
-            cy.visit('http://127.0.0.1/manager/cad_perfil.php5')
+            cy.visit('/cad_perfil.php5')
             cy.get('#FLT_COD_PERFIL').clear()
                 .type('100')
             cy.get('#EXEC_FILTRO').click()

@@ -19,7 +19,7 @@ describe('Cadastro Planos de Pagamento', () => {
             const task = testData.datas
 
 
-            cy.visit('http://127.0.0.1/manager/cad_plano.php5?id_menu=205')
+            cy.visit('/cad_plano.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#B_VALOR_BTN').click()
             cy.get('#NOME').type(task.name)
@@ -46,7 +46,7 @@ describe('Cadastro Planos de Pagamento', () => {
             const task = testData.datas
 
 
-            cy.visit('http://127.0.0.1/manager/cad_plano.php5?id_menu=205')
+            cy.visit('/cad_plano.php5')
             cy.get('#FLT_NOME').clear()
                 .type(task.name)
             cy.get('#EXEC_FILTRO').click()
@@ -67,7 +67,7 @@ describe('Cadastro Planos de Pagamento', () => {
             const task = testData.datas
 
 
-            cy.visit('http://127.0.0.1/manager/cad_plano.php5?id_menu=205')
+            cy.visit('/cad_plano.php5')
             cy.get('#FLT_NOME').clear()
                 .type(task.namealt)
             cy.get('#EXEC_FILTRO').click()

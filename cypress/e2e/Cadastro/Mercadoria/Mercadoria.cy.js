@@ -20,7 +20,7 @@ describe('Cadastro Mercadoria', () => {
             const task = testData.mercadoria
 
 
-            cy.visit('http://127.0.0.1/manager/cad_mercadoria.php5?id_menu=21101')
+            cy.visit('/cad_mercadoria.php5')
             cy.get('#btn_Incluir').click()
             cy.get('.input-group > #COD_MERCADORIA').type(task.cod)
             cy.get('#DESCRICAO').type(task.name)
@@ -58,7 +58,7 @@ describe('Cadastro Mercadoria', () => {
             const task = testData.mercadoria
 
 
-            cy.visit('http://127.0.0.1/manager/cad_mercadoria.php5?id_menu=21101')
+            cy.visit('/cad_mercadoria.php5')
             cy.get('#FLT_COD_MERCADORIA').clear()
                 .type(task.cod)
             cy.get('#FLT_DESCRICAO').clear()
@@ -86,7 +86,7 @@ describe('Cadastro Mercadoria', () => {
             const task = testData.mercadoria
 
 
-            cy.visit('http://127.0.0.1/manager/cad_mercadoria.php5?id_menu=21101')
+            cy.visit('/cad_mercadoria.php5')
             cy.get('#FLT_COD_MERCADORIA').clear()
                 .type(task.cod)
             cy.get('#FLT_DESCRICAO').clear()

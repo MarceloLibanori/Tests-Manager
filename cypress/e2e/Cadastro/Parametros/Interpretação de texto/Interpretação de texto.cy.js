@@ -18,7 +18,7 @@ describe('Cadastro Interpretação de texto', () => {
 
             const task = testData.Interpretaçãodetexto
 
-            cy.visit('http://127.0.0.1/manager/cad_interpreta_texto.php5?id_menu=20308')
+            cy.visit('/cad_interpreta_texto.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_LEGENDA').type(task.cod)
             cy.get('#LEGENDA_INFORMADA').type(task.name)
@@ -40,7 +40,7 @@ describe('Cadastro Interpretação de texto', () => {
 
             const task = testData.Interpretaçãodetexto
 
-            cy.visit('http://127.0.0.1/manager/cad_interpreta_texto.php5?id_menu=20308')
+            cy.visit('/cad_interpreta_texto.php5')
             cy.get('#FLT_COD_LEGENDA').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -63,7 +63,7 @@ describe('Cadastro Interpretação de texto', () => {
 
                 const task = testData.Interpretaçãodetexto
 
-                cy.visit('http://127.0.0.1/manager/cad_interpreta_texto.php5?id_menu=20308')
+                cy.visit('/cad_interpreta_texto.php5')
                 cy.get('#FLT_COD_LEGENDA').clear()
                     .type(task.cod)
                 cy.get('#EXEC_FILTRO').click()

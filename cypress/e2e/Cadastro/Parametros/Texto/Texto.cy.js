@@ -18,7 +18,7 @@ describe('Cadastro Texto', () => {
 
             const task = testData.Texto
 
-            cy.visit('http://127.0.0.1/manager/cad_texto.php5?id_menu=20301')
+            cy.visit('/cad_texto.php5')
             cy.get('#btn_Incluir').click()
             cy.get('.form-group > #COD_TEXTO').type(task.cod)
             cy.get('#DESCRICAO').type(task.name)
@@ -41,7 +41,7 @@ describe('Cadastro Texto', () => {
 
             const task = testData.Texto
 
-            cy.visit('http://127.0.0.1/manager/cad_texto.php5?id_menu=20301')
+            cy.visit('/cad_texto.php5')
             cy.get('#FLT_COD_TEXTO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -60,7 +60,7 @@ describe('Cadastro Texto', () => {
 
             const task = testData.Texto
 
-            cy.visit('http://127.0.0.1/manager/cad_texto.php5?id_menu=20301')
+            cy.visit('/cad_texto.php5')
             cy.get('#FLT_COD_TEXTO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

@@ -23,7 +23,7 @@ describe('Cadastro Clientes PF', () => {
       const task = testData.pf
 
 
-      cy.visit('http://127.0.0.1/manager/cad_cliente.php5?id_menu=202')
+      cy.visit('/cad_cliente.php5')
       cy.incluir()
       cy.get('#B_VALOR_BTN').click()
       cy.get('#DES_CLIENTE').type(task.name)
@@ -45,7 +45,7 @@ describe('Cadastro Clientes PF', () => {
 
       const task = testData.pf
 
-      cy.visit('http://127.0.0.1/manager/cad_cliente.php5?id_menu=202')
+      cy.visit('/cad_cliente.php5')
       cy.buscar(task.cpf)
       cy.get('#parametro_geral_alterar').click()
       cy.get('#DIV_ABA_H_0').click()
@@ -65,7 +65,7 @@ describe('Cadastro Clientes PF', () => {
     it('Excluir cliente PF', () => {
       const task = testData.pf
 
-      cy.visit('http://127.0.0.1/manager/cad_cliente.php5?id_menu=202')
+      cy.visit('/cad_cliente.php5')
       cy.buscar(task.cpf)
       cy.contains('#SEL_cliente_TBODY', task.namealt)
         .should('be.visible')

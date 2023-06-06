@@ -19,7 +19,7 @@ describe('Cadastro Veiculos', () => {
             const task = testData.pj
 
 
-            cy.visit('http://127.0.0.1/manager/cad_veiculo.php5?id_menu=21702')
+            cy.visit('/cad_veiculo.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_VEICULO').type(task.cod)
             cy.get('#MARCA_VEICULO').type(task.name)
@@ -42,7 +42,7 @@ describe('Cadastro Veiculos', () => {
             const task = testData.pj
 
 
-            cy.visit('http://127.0.0.1/manager/cad_veiculo.php5?id_menu=21702')
+            cy.visit('/cad_veiculo.php5')
             cy.get('#FLT_COD_VEICULO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -63,7 +63,7 @@ describe('Cadastro Veiculos', () => {
 
             const task = testData.pj
 
-            cy.visit('http://127.0.0.1/manager/cad_veiculo.php5?id_menu=21702')
+            cy.visit('/cad_veiculo.php5')
             cy.get('#FLT_COD_VEICULO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

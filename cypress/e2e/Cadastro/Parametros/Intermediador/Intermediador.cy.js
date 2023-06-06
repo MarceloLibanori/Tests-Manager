@@ -18,7 +18,7 @@ describe('Cadastro Intermediador', () => {
 
             const task = testData.intermediador
 
-            cy.visit('http://127.0.0.1/manager/cad_intermediador.php5')
+            cy.visit('/cad_intermediador.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_INTERMEDIADOR').type(task.cod)
             cy.get('#DES_INTERMEDIADOR').type(task.name)
@@ -39,7 +39,7 @@ describe('Cadastro Intermediador', () => {
 
             const task = testData.intermediador
 
-            cy.visit('http://127.0.0.1/manager/cad_intermediador.php5')
+            cy.visit('/cad_intermediador.php5')
             cy.get('#FLT_COD_INTERMEDIADOR').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -60,7 +60,7 @@ describe('Cadastro Intermediador', () => {
 
             const task = testData.intermediador
 
-            cy.visit('http://127.0.0.1/manager/cad_intermediador.php5')
+            cy.visit('/cad_intermediador.php5')
             cy.get('#FLT_COD_INTERMEDIADOR').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

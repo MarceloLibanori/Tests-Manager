@@ -18,7 +18,7 @@ describe('Cadastro Cedulas', () => {
 
             const task = testData.cedulas
 
-            cy.visit('http://127.0.0.1/manager/cad_cedula.php5')
+            cy.visit('/cad_cedula.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_TAB_CEDULA').type(task.cod)
             cy.get('#VALOR').type(task.valor)
@@ -41,7 +41,7 @@ describe('Cadastro Cedulas', () => {
 
             const task = testData.cedulas
 
-            cy.visit('http://127.0.0.1/manager/cad_cedula.php5')
+            cy.visit('/cad_cedula.php5')
             cy.get('#FLT_COD_TAB_CEDULA').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -64,7 +64,7 @@ describe('Cadastro Cedulas', () => {
 
             const task = testData.cedulas
 
-            cy.visit('http://127.0.0.1/manager/cad_cedula.php5')
+            cy.visit('/cad_cedula.php5')
             cy.get('#FLT_COD_TAB_CEDULA').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

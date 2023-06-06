@@ -19,7 +19,7 @@ describe('Cadastro Motivos', () => {
             const task = testData.Movivos
 
 
-            cy.visit('http://127.0.0.1/manager/cad_motivo_devolucao.php5?id_menu=20306')
+            cy.visit('/cad_motivo_devolucao.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_MOTIVO').type(task.cod)
             cy.get('#DESCRICAO').type(task.name)
@@ -41,7 +41,7 @@ describe('Cadastro Motivos', () => {
 
             const task = testData.Movivos
 
-            cy.visit('http://127.0.0.1/manager/cad_motivo_devolucao.php5?id_menu=20306')
+            cy.visit('/cad_motivo_devolucao.php5')
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.name)
             cy.get('#FLT_COD_MOTIVO').clear()
@@ -70,7 +70,7 @@ describe('Cadastro Motivos', () => {
 
             const task = testData.Movivos
 
-            cy.visit('http://127.0.0.1/manager/cad_motivo_devolucao.php5?id_menu=20306')
+            cy.visit('/cad_motivo_devolucao.php5')
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.namealt)
             cy.get('#FLT_COD_MOTIVO').clear()

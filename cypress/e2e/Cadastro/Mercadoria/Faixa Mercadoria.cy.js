@@ -19,7 +19,7 @@ describe('Cadastro Faixa Mercadoria', () => {
 
             const task = testData.faixamercadoria
 
-            cy.visit('http://127.0.0.1/manager/cad_faixa_mercadoria.php5')
+            cy.visit('/cad_faixa_mercadoria.php5')
             cy.incluir()
             cy.get('#COD_FAIXA_MERCADORIA').type(task.faixa)
             cy.get('#DESCRICAO').type(task.descricao)
@@ -40,7 +40,7 @@ describe('Cadastro Faixa Mercadoria', () => {
 
             const task = testData.faixamercadoria
 
-            cy.visit('http://127.0.0.1/manager/cad_faixa_mercadoria.php5')
+            cy.visit('/cad_faixa_mercadoria.php5')
             cy.get('#FLT_COD_FAIXA_MERCADORIA').clear()
                 .type(task.faixa)
             cy.get('#EXEC_FILTRO').click()
@@ -63,7 +63,7 @@ describe('Cadastro Faixa Mercadoria', () => {
 
             const task = testData.faixamercadoria
 
-            cy.visit('http://127.0.0.1/manager/cad_faixa_mercadoria.php5')
+            cy.visit('/cad_faixa_mercadoria.php5')
             cy.get('#FLT_COD_FAIXA_MERCADORIA').clear()
                 .type(task.faixa)
             cy.get('#EXEC_FILTRO').click()

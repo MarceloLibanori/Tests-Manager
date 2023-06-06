@@ -20,7 +20,7 @@ describe('Cadastro Departamento loja', () => {
             const task = testData.faixa
 
            
-            cy.visit('http://127.0.0.1/manager/cad_faixa_departamento.php5?id_menu=21202')
+            cy.visit('/cad_faixa_departamento.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_FAIXA_DEPARTAMENTO').type(task.cod)
             cy.get('#DESCRICAO').type(task.name)
@@ -39,7 +39,7 @@ describe('Cadastro Departamento loja', () => {
             const task = testData.faixa
 
            
-            cy.visit('http://127.0.0.1/manager/cad_faixa_departamento.php5?id_menu=21202')
+            cy.visit('/cad_faixa_departamento.php5')
             cy.get('#FLT_COD_FAIXA_DEPARTAMENTO').clear()
             .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -62,7 +62,7 @@ describe('Cadastro Departamento loja', () => {
             const task = testData.faixa
 
            
-            cy.visit('http://127.0.0.1/manager/cad_faixa_departamento.php5?id_menu=21202')
+            cy.visit('/cad_faixa_departamento.php5')
             cy.get('#FLT_COD_FAIXA_DEPARTAMENTO').clear()
             .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

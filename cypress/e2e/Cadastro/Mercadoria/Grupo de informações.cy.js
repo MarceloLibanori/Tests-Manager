@@ -18,7 +18,7 @@ describe('Cadastro Grupo de informações', () => {
 
             const task = testData.Grupodeinformações
 
-            cy.visit('http://127.0.0.1/manager/cad_grupo_informacao.php5?')
+            cy.visit('/cad_grupo_informacao.php5')
             cy.incluir()
             cy.get('#COD_GRUPO_INFORMACAO').type(task.cod)
             cy.get('#DES_GRUPO').type(task.descricao)
@@ -42,7 +42,7 @@ describe('Cadastro Grupo de informações', () => {
 
             const task = testData.Grupodeinformações
 
-            cy.visit('http://127.0.0.1/manager/cad_grupo_informacao.php5?')
+            cy.visit('/cad_grupo_informacao.php5')
             cy.get('#FLT_DES_GRUPO').clear()
                 .type(task.descricao)
             cy.get('#EXEC_FILTRO').click()
@@ -64,7 +64,7 @@ describe('Cadastro Grupo de informações', () => {
 
             const task = testData.Grupodeinformações
 
-            cy.visit('http://127.0.0.1/manager/cad_grupo_informacao.php5?')
+            cy.visit('/cad_grupo_informacao.php5')
             cy.get('#FLT_DES_GRUPO').clear()
                 .type(task.descricaoalt)
             cy.get('#EXEC_FILTRO').click()

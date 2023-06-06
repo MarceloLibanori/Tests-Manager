@@ -11,7 +11,7 @@ describe('Cadastro Pagamento e Recebimento', () => {
         it('Cadastrar Pagamento e Recebimento', () => {
 
 
-            cy.visit('http://127.0.0.1/manager/cad_pagamento_recebimento.php5?id_menu=204')
+            cy.visit('/cad_pagamento_recebimento.php5')
             cy.get('#btn_Incluir').click()
             cy.get('.input-group > #COD_PAGAMENTO_RECEBIMENTO').type('2412')
             cy.get('#DESCRICAO').type('CURSO CYPRESS')
@@ -39,7 +39,7 @@ describe('Cadastro Pagamento e Recebimento', () => {
         it('Alterar Pagamento e Recebimento', () => {
 
 
-            cy.visit('http://127.0.0.1/manager/cad_pagamento_recebimento.php5?id_menu=204')
+            cy.visit('/cad_pagamento_recebimento.php5')
             cy.get('#FLT_COD_PAGAMENTO_RECEBIMENTO').clear()
                 .type('2412')
             cy.get('#EXEC_FILTRO').click()
@@ -59,7 +59,7 @@ describe('Cadastro Pagamento e Recebimento', () => {
         it('Excluir Pagamento e Recebimento', () => {
 
 
-            cy.visit('http://127.0.0.1/manager/cad_pagamento_recebimento.php5?id_menu=204')
+            cy.visit('/cad_pagamento_recebimento.php5')
             cy.get('#FLT_COD_PAGAMENTO_RECEBIMENTO').clear()
                 .type('2412')
             cy.get('#EXEC_FILTRO').click()

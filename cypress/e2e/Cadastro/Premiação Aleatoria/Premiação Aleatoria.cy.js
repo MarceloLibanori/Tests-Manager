@@ -19,7 +19,7 @@ describe('Cadastro Premiação Aleatoria', () => {
             const task = testData.datas1
 
 
-            cy.visit('http://127.0.0.1/manager/cad_premiacao.php5')
+            cy.visit('/cad_premiacao.php5')
             cy.get('#btn_Incluir').click()
             cy.get('.input-group > #COD_PREMIO').type(task.cod)
             cy.get('#DESCRICAO').type(task.name)
@@ -52,7 +52,7 @@ describe('Cadastro Premiação Aleatoria', () => {
             const task = testData.datas1
 
 
-            cy.visit('http://127.0.0.1/manager/cad_premiacao.php5')
+            cy.visit('/cad_premiacao.php5')
             cy.get('#FLT_COD_PREMIO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -71,7 +71,7 @@ describe('Cadastro Premiação Aleatoria', () => {
             const task = testData.datas1
 
 
-            cy.visit('http://127.0.0.1/manager/cad_premiacao.php5')
+            cy.visit('/cad_premiacao.php5')
             cy.get('#FLT_COD_PREMIO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

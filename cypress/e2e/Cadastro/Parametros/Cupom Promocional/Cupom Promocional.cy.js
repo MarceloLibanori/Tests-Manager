@@ -18,7 +18,7 @@ describe('Cadastro Cupom Promocional', () => {
 
             const task = testData.cupom
 
-            cy.visit('http://127.0.0.1/manager/cad_cupom_promocional.php5?id_menu=20303')
+            cy.visit('/cad_cupom_promocional.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_TEXTO').type(task.cod)
             cy.get('#QUANTIDADE_CUPONS').type(task.qtdcupom)
@@ -37,7 +37,7 @@ describe('Cadastro Cupom Promocional', () => {
 
             const task = testData.cupom
 
-            cy.visit('http://127.0.0.1/manager/cad_cupom_promocional.php5?id_menu=20303')
+            cy.visit('/cad_cupom_promocional.php5')
             cy.get('#EXEC_FILTRO').click()
             cy.get('#valor_combo_alterar').click()
             cy.get('#QUANTIDADE_CUPONS').clear()
@@ -55,7 +55,7 @@ describe('Cadastro Cupom Promocional', () => {
 
             const task = testData.cupom
 
-            cy.visit('http://127.0.0.1/manager/cad_cupom_promocional.php5?id_menu=20303')
+            cy.visit('/cad_cupom_promocional.php5')
             cy.get('#EXEC_FILTRO').click()
             cy.get('#valor_combo_excluir').click()
             cy.msgexcluir()

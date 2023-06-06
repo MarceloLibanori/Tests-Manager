@@ -19,7 +19,7 @@ describe('Cadastro Widget', () => {
             const task = testData.datas
 
 
-            cy.visit('http://127.0.0.1/manager/cad_widget.php5')
+            cy.visit('/cad_widget.php5')
             cy.get('#btn_Incluir').click()
             cy.get(':nth-child(1) > :nth-child(1) > .form-group > #LABEL_WIDGET').type(task.name)
             cy.get('#DIV_ABA_H_1').click()
@@ -48,7 +48,7 @@ describe('Cadastro Widget', () => {
             const task = testData.datas
 
 
-            cy.visit('http://127.0.0.1/manager/cad_widget.php5')
+            cy.visit('/cad_widget.php5')
             cy.get('#FLT_LABEL_WIDGET').clear()
                 .type(task.name)
             cy.get('#EXEC_FILTRO').click()
@@ -69,7 +69,7 @@ describe('Cadastro Widget', () => {
             const task = testData.datas
 
 
-            cy.visit('http://127.0.0.1/manager/cad_widget.php5')
+            cy.visit('/cad_widget.php5')
             cy.get('#FLT_LABEL_WIDGET').clear()
                 .type(task.namealt)
             cy.get('#EXEC_FILTRO').click()

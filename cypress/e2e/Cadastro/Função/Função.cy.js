@@ -20,7 +20,7 @@ describe('Cadastro Função', () => {
             const task = testData.funcao
 
 
-            cy.visit('http://127.0.0.1/manager/cad_funcao.php5')
+            cy.visit('/cad_funcao.php5')
             cy.get('#btn_Incluir').click()
             cy.get('.form-group > #COD_FUNCAO').type(task.cod)
             cy.get('#DESCRICAO').type(task.name)
@@ -45,7 +45,7 @@ describe('Cadastro Função', () => {
             const task = testData.funcao
 
 
-            cy.visit('http://127.0.0.1/manager/cad_funcao.php5')
+            cy.visit('/cad_funcao.php5')
             cy.get('#FLT_COD_FUNCAO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -65,7 +65,7 @@ describe('Cadastro Função', () => {
             const task = testData.funcao
 
 
-            cy.visit('http://127.0.0.1/manager/cad_funcao.php5')
+            cy.visit('/cad_funcao.php5')
             cy.get('#FLT_COD_FUNCAO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

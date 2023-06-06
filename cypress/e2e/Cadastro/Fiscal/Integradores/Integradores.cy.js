@@ -18,7 +18,7 @@ describe('Cadastro Integradores', () => {
 
             const task = testData.Integradores
 
-            cy.visit('http://127.0.0.1/manager/cad_integrador.php5?id_menu=20808')
+            cy.visit('/cad_integrador.php5')
             cy.get('#btn_Incluir').click()
             cy.get('.input-group > #COD_INTEGRADOR').type(task.cod)
             cy.get('#DESCRICAO').type(task.name)
@@ -37,7 +37,7 @@ describe('Cadastro Integradores', () => {
 
             const task = testData.Integradores
 
-            cy.visit('http://127.0.0.1/manager/cad_integrador.php5?id_menu=20808')
+            cy.visit('/cad_integrador.php5')
             cy.get('#FLT_COD_INTEGRADOR').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -57,7 +57,7 @@ describe('Cadastro Integradores', () => {
 
             const task = testData.Integradores
 
-            cy.visit('http://127.0.0.1/manager/cad_integrador.php5?id_menu=20808')
+            cy.visit('/cad_integrador.php5')
             cy.get('#FLT_COD_INTEGRADOR').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

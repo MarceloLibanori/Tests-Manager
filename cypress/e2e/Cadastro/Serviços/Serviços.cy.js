@@ -19,7 +19,7 @@ describe('Cadastro Serviços', () => {
 
             const task = testData.servicos
 
-            cy.visit('http://127.0.0.1/manager/cad_produto_servico.php5?id_menu=22201')
+            cy.visit('/cad_produto_servico.php5')
             cy.incluir()
             cy.get('#COD_SERVICO').type(task.cod)
             cy.get('#DESCRICAO').type(task.descricao)
@@ -38,7 +38,7 @@ describe('Cadastro Serviços', () => {
 
             const task = testData.servicos
 
-            cy.visit('http://127.0.0.1/manager/cad_produto_servico.php5?id_menu=22201')
+            cy.visit('/cad_produto_servico.php5')
             cy.get('#FLT_COD_SERVICO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -61,7 +61,7 @@ describe('Cadastro Serviços', () => {
 
             const task = testData.servicos
 
-            cy.visit('http://127.0.0.1/manager/cad_produto_servico.php5?id_menu=22201')
+            cy.visit('/cad_produto_servico.php5')
             cy.get('#FLT_COD_SERVICO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

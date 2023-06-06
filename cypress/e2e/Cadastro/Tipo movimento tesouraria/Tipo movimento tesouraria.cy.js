@@ -19,7 +19,7 @@ describe('Cadastro Tipo movimento tesouraria', () => {
             const task = testData.finalizadora
 
 
-            cy.visit('http://127.0.0.1/manager/cad_tipo_mov_tesouraria.php5?id_menu=214')
+            cy.visit('/cad_tipo_mov_tesouraria.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_TIPO_MOV_TESOURARIA').type(task.cod)
             cy.get('#DES_TIPO_MOV_TESOURARIA').type(task.name)
@@ -41,7 +41,7 @@ describe('Cadastro Tipo movimento tesouraria', () => {
 
 
 
-            cy.visit('http://127.0.0.1/manager/cad_tipo_mov_tesouraria.php5?id_menu=214')
+            cy.visit('/cad_tipo_mov_tesouraria.php5')
             cy.get('#FLT_COD_TIPO_MOV_TESOURARIA').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -64,7 +64,7 @@ describe('Cadastro Tipo movimento tesouraria', () => {
             const task = testData.finalizadora
 
 
-            cy.visit('http://127.0.0.1/manager/cad_tipo_mov_tesouraria.php5?id_menu=214')
+            cy.visit('/cad_tipo_mov_tesouraria.php5')
             cy.get('#FLT_COD_TIPO_MOV_TESOURARIA').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

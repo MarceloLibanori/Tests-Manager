@@ -19,7 +19,7 @@ describe('Cadastro CFOP', () => {
             const task = testData.CFOP
 
 
-            cy.visit('http://127.0.0.1/manager/cad_cfop.php5')
+            cy.visit('/cad_cfop.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_CODIGO_FISCAL').type(task.cod)
             cy.get('#CFOP').type(task.cfop)
@@ -42,7 +42,7 @@ describe('Cadastro CFOP', () => {
 
             const task = testData.CFOP
 
-            cy.visit('http://127.0.0.1/manager/cad_cfop.php5')
+            cy.visit('/cad_cfop.php5')
             cy.get('#FLT_COD_CODIGO_FISCAL').clear()
                 .type(task.cod)
             cy.get('#FLT_CFOP').clear()
@@ -65,7 +65,7 @@ describe('Cadastro CFOP', () => {
 
             const task = testData.CFOP
 
-            cy.visit('http://127.0.0.1/manager/cad_cfop.php5')
+            cy.visit('/cad_cfop.php5')
             cy.get('#FLT_COD_CODIGO_FISCAL').clear()
                 .type(task.cod)
             cy.get('#FLT_CFOP').clear()

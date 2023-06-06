@@ -19,7 +19,7 @@ describe('Cadastro Tabela preços', () => {
 
             const task = testData.tabelaprecos
 
-            cy.visit('http://127.0.0.1/manager/cad_preco_servico.php5?id_menu=22202')
+            cy.visit('/cad_preco_servico.php5')
             cy.incluir()
             cy.get('#COD_SERVICO').select(task.codserv)
             cy.get('#COD_SERVICO_TABELA').type(task.cod)
@@ -45,7 +45,7 @@ describe('Cadastro Tabela preços', () => {
 
             const task = testData.tabelaprecos
 
-            cy.visit('http://127.0.0.1/manager/cad_preco_servico.php5?id_menu=22202')
+            cy.visit('/cad_preco_servico.php5')
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.descricao)
             cy.get('#EXEC_FILTRO').click()
@@ -68,7 +68,7 @@ describe('Cadastro Tabela preços', () => {
 
             const task = testData.tabelaprecos
 
-            cy.visit('http://127.0.0.1/manager/cad_preco_servico.php5?id_menu=22202')
+            cy.visit('/cad_preco_servico.php5')
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.descricaoalt)
             cy.get('#EXEC_FILTRO').click()

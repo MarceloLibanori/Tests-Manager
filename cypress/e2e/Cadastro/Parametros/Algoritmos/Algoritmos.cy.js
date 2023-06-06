@@ -18,7 +18,7 @@ describe('Cadastro Algoritimos', () => {
 
             const task = testData.algoritimos
 
-            cy.visit('http://127.0.0.1/manager/cad_algoritmo.php5?id_menu=20311')
+            cy.visit('/cad_algoritmo.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_ALGORITMO').type(task.cod)
             cy.get('#DESCRICAO').type(task.name)
@@ -36,7 +36,7 @@ describe('Cadastro Algoritimos', () => {
 
             const task = testData.algoritimos
 
-            cy.visit('http://127.0.0.1/manager/cad_algoritmo.php5?id_menu=20311')
+            cy.visit('/cad_algoritmo.php5')
             cy.get('#FLT_COD_ALGORITMO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -56,7 +56,7 @@ describe('Cadastro Algoritimos', () => {
         it('Excluir Algoritimos', () => {
 
             const task = testData.algoritimos
-            cy.visit('http://127.0.0.1/manager/cad_algoritmo.php5?id_menu=20311')
+            cy.visit('/cad_algoritmo.php5')
             cy.get('#FLT_COD_ALGORITMO').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

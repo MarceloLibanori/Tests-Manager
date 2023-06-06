@@ -19,7 +19,7 @@ describe('Cadastro Receita(', () => {
 
             const task = testData.receita
 
-            cy.visit('http://127.0.0.1/manager/cad_receita.php5?id_menu=21105')
+            cy.visit('/cad_receita.php5')
             cy.incluir()
             cy.get('#COD_RECEITA').type(task.cod)
             cy.get('#DES_RECEITA').type(task.descricao)
@@ -42,7 +42,7 @@ describe('Cadastro Receita(', () => {
 
             const task = testData.receita
 
-            cy.visit('http://127.0.0.1/manager/cad_receita.php5?id_menu=21105')
+            cy.visit('/cad_receita.php5')
             cy.get('#FLT_DES_RECEITA').clear()
                 .type(task.descricao)
             cy.get('#EXEC_FILTRO').click()
@@ -64,7 +64,7 @@ describe('Cadastro Receita(', () => {
 
             const task = testData.receita
 
-            cy.visit('http://127.0.0.1/manager/cad_receita.php5?id_menu=21105')
+            cy.visit('/cad_receita.php5')
             cy.get('#FLT_DES_RECEITA').clear()
                 .type(task.descricaoalt)
             cy.get('#EXEC_FILTRO').click()

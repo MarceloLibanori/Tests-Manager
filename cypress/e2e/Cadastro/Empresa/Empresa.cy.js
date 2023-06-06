@@ -17,7 +17,7 @@ describe('Cadastro Empresa', () => {
             const task = testData.empresa
 
            
-            cy.visit('http://127.0.0.1/manager/cad_empresa_pai.php5')
+            cy.visit('/cad_empresa_pai.php5')
             cy.incluir()
             cy.get('#COD_EMPRESA').type(task.cod)
             cy.get('#DES_EMPRESA').type(task.name)
@@ -40,7 +40,7 @@ describe('Cadastro Empresa', () => {
             const task = testData.empresa
 
            
-            cy.visit('http://127.0.0.1/manager/cad_empresa_pai.php5')
+            cy.visit('/cad_empresa_pai.php5')
             cy.get('#FLT_COD_EMPRESA').clear()
             .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -63,7 +63,7 @@ describe('Cadastro Empresa', () => {
             const task = testData.empresa
 
           
-            cy.visit('http://127.0.0.1/manager/cad_empresa_pai.php5')
+            cy.visit('/cad_empresa_pai.php5')
             cy.get('#FLT_COD_EMPRESA').clear()
             .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

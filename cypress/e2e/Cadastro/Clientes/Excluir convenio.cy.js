@@ -23,7 +23,7 @@ describe('Excluir convenio', () => {
             const task = testData.altcliente
 
 
-            cy.visit('http://127.0.0.1/manager/cad_cliente.php5?id_menu=202')
+            cy.visit('/cad_cliente.php5')
             cy.buscar(task.cpf)
             cy.get('#parametro_geral_alterar').click()
             cy.get('#DIV_ABA_H_17').click()
@@ -46,7 +46,7 @@ describe('Excluir convenio', () => {
             const task = testData.altcliente
 
 
-            cy.visit('http://127.0.0.1/manager/cad_cliente.php5?id_menu=202')
+            cy.visit('/cad_cliente.php5')
             cy.buscar(task.cpf)
             cy.get('#parametro_geral_alterar').click()
             cy.get('#DIV_ABA_H_17').click()

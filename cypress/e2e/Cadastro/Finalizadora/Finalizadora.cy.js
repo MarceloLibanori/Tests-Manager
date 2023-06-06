@@ -19,7 +19,7 @@ describe('Cadastro Finalizadora', () => {
             const task = testData.finalizadora
 
 
-            cy.visit('http://127.0.0.1/manager/cad_finalizadora.php5')
+            cy.visit('/cad_finalizadora.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#COD_FINALIZADORA').type(task.cod)
             cy.get('#DESCRICAO').type(task.name)
@@ -42,7 +42,7 @@ describe('Cadastro Finalizadora', () => {
             const task = testData.finalizadora
 
 
-            cy.visit('http://127.0.0.1/manager/cad_finalizadora.php5')
+            cy.visit('/cad_finalizadora.php5')
             cy.get('#FLT_COD_FINALIZADORA').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -64,7 +64,7 @@ describe('Cadastro Finalizadora', () => {
             const task = testData.finalizadora
 
 
-            cy.visit('http://127.0.0.1/manager/cad_finalizadora.php5')
+            cy.visit('/cad_finalizadora.php5')
             cy.get('#FLT_COD_FINALIZADORA').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

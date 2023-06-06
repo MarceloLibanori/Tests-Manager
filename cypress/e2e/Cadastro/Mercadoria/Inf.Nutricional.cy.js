@@ -18,7 +18,7 @@ describe('Cadastro de tabela nutricional(', () => {
 
 
             const task = testData.infnutricional
-            cy.visit('http://127.0.0.1/manager/cad_nutricional.php5')
+            cy.visit('/cad_nutricional.php5')
             cy.incluir()
             cy.get('#COD_NUTRICIONAL').type(task.cod)
             cy.get('#DES_PORCAO').type(task.descricao)
@@ -41,7 +41,7 @@ describe('Cadastro de tabela nutricional(', () => {
 
             const task = testData.infnutricional
 
-            cy.visit('http://127.0.0.1/manager/cad_nutricional.php5')
+            cy.visit('/cad_nutricional.php5')
             cy.get('#FLT_COD_NUTRICIONAL').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -64,7 +64,7 @@ describe('Cadastro de tabela nutricional(', () => {
 
             const task = testData.infnutricional
 
-            cy.visit('http://127.0.0.1/manager/cad_nutricional.php5')
+            cy.visit('/cad_nutricional.php5')
             cy.get('#FLT_COD_NUTRICIONAL').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

@@ -18,7 +18,7 @@ describe('Cadastro Chaves criptografia PDV', () => {
 
             const task = testData.chave
 
-            cy.visit('http://127.0.0.1/manager/cad_chaves_pdv.php5?id_menu=20326')
+            cy.visit('/cad_chaves_pdv.php5')
             cy.get('#btn_Incluir').click()
             cy.get('#DESCRICAO').type(task.name)
             cy.get('#CONTEUDO').type(task.chave)
@@ -35,7 +35,7 @@ describe('Cadastro Chaves criptografia PDV', () => {
 
             const task = testData.chave
 
-            cy.visit('http://127.0.0.1/manager/cad_chaves_pdv.php5?id_menu=20326')
+            cy.visit('/cad_chaves_pdv.php5')
             cy.get('#EXEC_FILTRO').click()
             cy.get('#cad_chaves_pdv_alterar').click()
             cy.get('#DESCRICAO').clear()
@@ -51,7 +51,7 @@ describe('Cadastro Chaves criptografia PDV', () => {
 
             const task = testData.chave
 
-            cy.visit('http://127.0.0.1/manager/cad_chaves_pdv.php5?id_menu=20326')
+            cy.visit('/cad_chaves_pdv.php5')
             cy.get('#EXEC_FILTRO').click()
             cy.get('#cad_chaves_pdv_excluir').click()
             cy.msgexcluir()

@@ -21,7 +21,7 @@ describe('Cadastro cliente PJ', () => {
       const task = testData.pj
 
 
-      cy.visit('http://127.0.0.1/manager/cad_cliente.php5?id_menu=202')
+      cy.visit('/cad_cliente.php5')
       cy.incluir()
       cy.get('#FLG_EMPRESA').select('Pessoa jurídica')
       cy.get('#B_VALOR_BTN').click()
@@ -41,7 +41,7 @@ describe('Cadastro cliente PJ', () => {
       const task = testData.pj
 
 
-      cy.visit('http://127.0.0.1/manager/cad_cliente.php5?id_menu=202')
+      cy.visit('/cad_cliente.php5')
       cy.buscar(task.cnpj)
       cy.get('#parametro_geral_alterar').click()
       cy.get('#DIV_ABA_H_0').click()
@@ -59,7 +59,7 @@ describe('Cadastro cliente PJ', () => {
     it('Excluir cliente PJ', () => {
       const task = testData.pj
 
-      cy.visit('http://127.0.0.1/manager/cad_cliente.php5?id_menu=202')
+      cy.visit('/cad_cliente.php5')
       cy.buscar(task.cnpj)
       cy.get('#parametro_geral_excluir').click()
       cy.msgexcluir()

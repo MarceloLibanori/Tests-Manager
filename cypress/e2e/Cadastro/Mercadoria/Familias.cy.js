@@ -18,7 +18,7 @@ describe('Cadastro Familia', () => {
 
             const task = testData.familia
 
-            cy.visit('http://127.0.0.1/manager/cad_familia_produto.php5')
+            cy.visit('/cad_familia_produto.php5')
             cy.incluir()
             cy.get('#COD_FAMILIA').type(task.cod)
             cy.get('#ABR_FAMILIA').type(task.descricao)
@@ -38,7 +38,7 @@ describe('Cadastro Familia', () => {
 
             const task = testData.familia
 
-            cy.visit('http://127.0.0.1/manager/cad_familia_produto.php5')
+            cy.visit('/cad_familia_produto.php5')
             cy.get('#FLT_COD_FAMILIA').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()
@@ -61,7 +61,7 @@ describe('Cadastro Familia', () => {
 
             const task = testData.familia
 
-            cy.visit('http://127.0.0.1/manager/cad_familia_produto.php5')
+            cy.visit('/cad_familia_produto.php5')
             cy.get('#FLT_COD_FAMILIA').clear()
                 .type(task.cod)
             cy.get('#EXEC_FILTRO').click()

@@ -17,7 +17,7 @@ describe('Cadastro Coeficiente', () => {
             const task = testData.valores
 
 
-            cy.visit('http://127.0.0.1/manager/cad_coeficiente.php5')
+            cy.visit('/cad_coeficiente.php5')
             cy.incluir()
             cy.get('#COD_COEFICIENTE').type(task.cod)
             cy.get('#COEFICIENTE1').type(task.valor1)
@@ -38,7 +38,7 @@ describe('Cadastro Coeficiente', () => {
 
 
 
-            cy.visit('http://127.0.0.1/manager/cad_coeficiente.php5')
+            cy.visit('/cad_coeficiente.php5')
             cy.filtra()
             cy.get('#FLT_COD_COEFICIENTE').clear()
             .type(task.cod)
@@ -63,7 +63,7 @@ describe('Cadastro Coeficiente', () => {
             const task = testData.valores
 
 
-            cy.visit('http://127.0.0.1/manager/cad_coeficiente.php5')
+            cy.visit('/cad_coeficiente.php5')
             cy.filtra()
             cy.get('#FLT_COD_COEFICIENTE').clear()
             .type(task.cod)

@@ -18,7 +18,7 @@ describe('Cadastro Garantia Estendida', () => {
 
             const task = testData.garantiaestendida
 
-            cy.visit('http://127.0.0.1/manager/cad_garantia_extendida.php5?id_menu=20302')
+            cy.visit('/cad_garantia_extendida.php5')
             cy.get('#btn_Incluir').click()
             cy.get('.input-group > #GRUPO_GARANTIA').type(task.cod)
             cy.get(':nth-child(1) > .form-group > #DESCRICAO').type(task.descricao)
@@ -40,7 +40,7 @@ describe('Cadastro Garantia Estendida', () => {
 
             const task = testData.garantiaestendida
 
-            cy.visit('http://127.0.0.1/manager/cad_garantia_extendida.php5?id_menu=20302')
+            cy.visit('/cad_garantia_extendida.php5')
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.descricao)
             cy.get('#EXEC_FILTRO').click()
@@ -62,7 +62,7 @@ describe('Cadastro Garantia Estendida', () => {
 
             const task = testData.garantiaestendida
 
-            cy.visit('http://127.0.0.1/manager/cad_garantia_extendida.php5?id_menu=20302')
+            cy.visit('/cad_garantia_extendida.php5')
             cy.get('#FLT_DESCRICAO').clear()
                 .type(task.descricaoalt)
             cy.get('#EXEC_FILTRO').click()
